@@ -1,0 +1,261 @@
+/**********************************************************/
+/*                      MIXINS STYLES                     */
+/**********************************************************/
+
+@mixin text-truncate-multiline($font-size: $paragraph-font-size, $line-height: 1.4, $lines-to-show: 3, $excerpt-bg: transparent) {
+  background: $excerpt-bg;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @-moz-document url-prefix() {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      background: $excerpt-bg;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      float: right;
+      content: '\2026';
+      margin-left: -3rem;
+      width: 3rem;
+    }
+    &:after {
+      content: '';
+      background: $excerpt-bg;
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+
+/************ END - GENERAL COMPONENTS STYLES  ************/
+
+/**********************************************************/
+/*                       MODIFIERS                        */
+/**********************************************************/
+
+.link-reset {
+    color: inherit;
+}
+
+.margin-reset {
+    margin: 0;
+}
+
+/* Spaces */
+.space-1 {
+    margin-bottom: 6px;
+}
+.space-top-1 {
+    margin-top: 6px;
+}
+.space-2 {
+    margin-bottom: 12px;
+}
+.space-top-2 {
+    margin-top: 12px;
+}
+.space-3 {
+    margin-bottom: 18px;
+}
+.space-top-3 {
+    margin-top: 18px;
+}
+.space-4 {
+    margin-bottom: 24px;
+}
+.space-top-4 {
+    margin-top: 24px;
+}
+.space-5 {
+    margin-bottom: 30px;
+}
+.space-top-5 {
+    margin-top: 30px;
+}
+.space-6 {
+    margin-bottom: 36px;
+}
+.space-top-6 {
+    margin-top: 36px;
+}
+.space-7 {
+    margin-bottom: 42px;
+}
+.space-top-7 {
+    margin-top: 42px;
+}
+.space-8 {
+    margin-bottom: 48px;
+}
+.space-top-8 {
+    margin-top: 48px;
+}
+.space-9 {
+    margin-bottom: 54px;
+}
+.space-top-9 {
+    margin-top: 54px;
+}
+.space-10 {
+    margin-bottom: 60px;
+}
+.space-top-10 {
+    margin-top: 60px;
+}
+
+.padding-reset {
+    padding: 0;
+}
+
+.text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+}
+
+.vertical-align > [class^="col-"] > div,
+.vertical-align > [class*=" col-"] > div {
+  flex-grow: 1;
+}
+
+.text-wrap {
+    word-wrap: break-word;
+}
+
+.round {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/******************** END - MODIFIERS *********************/
+
+
+/**********************************************************/
+/*                GENERAL COMPONENTS STYLES               */
+/**********************************************************/
+
+/// USER PHOTO + REVIEWS COMPONENT
+.ma-user-photo-review-block {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    text-align: center;
+    position:relative;
+    display: block;
+
+    &__photo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__reviews {
+        text-align: center;
+    }
+}
+
+/// POINT SEPARATE
+.point-separate {
+    padding: 0px 10px;
+
+    &:before {
+        content: ' · ';
+    }
+}
+
+
+/// SEPARATOR WITH DASHED ALTERNATE IMAGE
+.ma-separator-dashed-image {
+    background-image: url(../../../../assets/images/dash-alternate.svg);
+    background-repeat: repeat-x;
+    height: 4px;
+    background-position: -12px center;
+    //margin-top: 20px;
+    //margin-bottom: 20px;
+    border: 0;
+}
+
+/************ END - GENERAL COMPONENTS STYLES  ************/
+
+
+/**********************************************************/
+/*                    BODY MAIN STYLES                    */
+/**********************************************************/
+
+body.mainApp {
+
+    padding: 0;
+    background-color: $body-background;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    line-height: $global-lineheight;
+    color: $body-font-color;
+    overflow-x: hidden;
+
+    label {
+        display: block;
+    }
+
+    .ma-logo {
+        background-image: url($logo-path);
+        background-repeat: no-repeat;
+        height: $logo-height;
+        width: $logo-width;
+        display: block;
+
+        &--secondary {
+            background-image: url($logo-path-secondary);
+        }
+        &--secondary-short {
+            background-image: url($logo-path-secondary-short);
+            height: $logo-short-height;
+            width: $logo-short-width;
+        }
+    }
+
+    .header-separator {
+        display: block;
+        height: 61px;
+    }
+
+
+    .screen-reader-only {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+}
+
+
+/**************** END - BODY MAIN STYLES  *****************/

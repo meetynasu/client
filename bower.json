@@ -1,0 +1,42 @@
+{
+  "name": "ynasu",
+  "version": "0.0.0",
+  "private": "true",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "moment": "~2.10.6",
+    "lodash": "~4.0.0",
+    "globalize": "~1.0.0",
+    "accounting": "^0.3.2",
+    "material-design-icons": "^2.2.3",
+    "animate.css": "^3.5.2",
+    "jquery": "^3.1.0",
+    "angular-resource": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "normalize-css": "^4.2.0",
+    "bootstrap": "^3.3.7",
+    "fullcalendar": "^3.0.1",
+    "angular-ui-calendar": "^1.0.2",
+    "angular-bootstrap": "^2.2.0",
+    "angular-translate": "^2.13.0",
+    "angular-translate-loader-url": "^2.13.0",
+    "angular-translate-loader-static-files": "^2.13.0",
+    "flexboxgrid": "^6.3.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8",
+    "jasmine-expect": "~1.22.3"
+  },
+  "resolutions": {
+    "angular": "1.5.8",
+    "fullcalendar": "^3.0.1",
+    "jquery": "^3.1.0"
+  }
+}
