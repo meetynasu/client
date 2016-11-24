@@ -11,11 +11,12 @@
         'mainApp.pages.main',
         'mainApp.components.header',
         'mainApp.components.map',
-        'mainApp.components.footer'
+        'mainApp.components.footer',
+        'mainApp.pages.landingPage'
     ])
         .config(config);
     function config($locationProvider, $urlRouterProvider, $translateProvider) {
-        $urlRouterProvider.otherwise('/page');
+        $urlRouterProvider.otherwise('/page/landing');
         var prefix = 'assets/i18n/';
         var suffix = '.json';
         $translateProvider.useStaticFilesLoader({

@@ -35,19 +35,25 @@ var paths = {
         "www/components/modal/modal.config.js",
         "www/app/pages/main/main.config.js",
         "www/app/pages/main/main.controller.js",
+        "www/app/pages/landingPage/landingPage.config.js",
+        "www/app/pages/landingPage/landingPage.controller.js",
+        "www/app/pages/landingPage/landingPage.service.js",
         "www/app/pages/signUpPage/signUpPage.config.js",
         "www/app/pages/signUpPage/signUpPage.controller.js"
     ],
     appLibsJs: [
         'www/libs/angular-bootstrap-datetimepicker/src/js/datetimepicker.js',
-        'www/libs/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js'
+        'www/libs/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js',
+        'www/libs/jquery.backtotop.js',
+        'www/libs/jquery.mobilemenu.js'
     ],
     vendorStyles: [
         'www/bower_components/normalize-css/normalize.css',
         'www/bower_components/animate.css/animate.min.css',
         'www/bower_components/flexboxgrid/dist/flexboxgrid.min.css',
         'www/bower_components/bootstrap/dist/css/bootstrap.min.css',
-        'www/bower_components/fullcalendar/dist/fullcalendar.min.css'
+        'www/bower_components/fullcalendar/dist/fullcalendar.min.css',
+        'www/libs/framework.css'
     ],
     appSass: ['www/**/**/*.scss'],
     inputSass: 'www/app/core/theme/**/*.scss',

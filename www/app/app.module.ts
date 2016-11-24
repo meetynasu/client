@@ -20,7 +20,8 @@
             'mainApp.pages.main',
             'mainApp.components.header',
             'mainApp.components.map',
-            'mainApp.components.footer'
+            'mainApp.components.footer',
+            'mainApp.pages.landingPage'
         ])
         .config(config);
 
@@ -31,8 +32,8 @@
         /*$locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');*/
 
-        $urlRouterProvider.otherwise('/page');
-        //$urlRouterProvider.otherwise('/page/landing');
+        //$urlRouterProvider.otherwise('/page');
+        $urlRouterProvider.otherwise('/page/landing');
 
         /* Translate Provider */
         let prefix = 'assets/i18n/';

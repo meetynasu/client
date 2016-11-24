@@ -69,25 +69,7 @@
 // MainApp Pages and Other components (modals, etc)
 // --------------------------------------------------
 
-// student Landing Page Style
-@import '../../pages/studentLandingPage/studentLandingPage';
-// meeting Confirmation Page Style
-@import '../../pages/meetingConfirmationPage/meetingConfirmationPage';
 // signUp Pages Style
 @import '../../pages/signUpPage/signUpPage';
-// search Pages Style
-@import '../../pages/searchPage/searchPage';
-// user Profile Pages Style
-@import '../../pages/userProfilePage/userProfilePage';
-// user Edit Profile Pages Style
-@import '../../pages/userEditProfilePage/userEditProfilePage';
-// user Edit Media Pages Style
-@import '../../pages/userEditMediaPage/userEditMediaPage';
-// user Edit Agenda Pages Style
-@import '../../pages/userEditAgendaPage/userEditAgendaPage';
-// user Inbox Pages Style
-@import '../../pages/userInboxPage/userInboxPage';
-// user Inbox Details Pages Style
-@import '../../pages/userInboxDetailsPage/userInboxDetailsPage';
-// add meeting Point Modals Style
-@import '../../../components/modal/modalMeetingPoint/modalMeetingPoint';
+// landing Pages Style
+@import '../../pages/landingPage/landingPage';
