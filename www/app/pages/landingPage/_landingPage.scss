@@ -19,12 +19,12 @@
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:250px 0 150px;}
+#pageintro{padding:100px 0 100px;}
 
 #pageintro .introtxt{display:block; max-width:50%; margin:0 auto; text-align:center;}
 #pageintro .introtxt *{margin:0;}
-#pageintro .introtxt .heading{margin-bottom:15px; font-size:36px;}
-#pageintro .introtxt p{font-size:16px; line-height:1.4;}
+#pageintro .introtxt .heading{margin-bottom:15px; font-size:36px; text-transform: none;}
+#pageintro .introtxt p{line-height:1.4;}
 #pageintro .introtxt footer{margin-top:30px;}
 
 
@@ -222,7 +222,7 @@ label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#56AED4;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,0.25);}
 .overlay.coloured::after{color:inherit; background-color:rgba(46,53,65,.8);/* #2E3541 */}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#56AED4; border-color:#56AED4;}
