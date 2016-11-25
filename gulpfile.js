@@ -193,4 +193,4 @@ gulp.task('build-vendor', ['bowerJS', 'libsJS', 'appJS', 'vendorCSS']);
 /*DEV*/
 gulp.task('dev', ['sass', 'webserver', 'build-vendor', 'watch']);
 /*PROD*/
-gulp.task('heroku:production', ['sass', 'serveprod']);
+gulp.task('heroku:deploy', ['sass', 'serveprod']);
