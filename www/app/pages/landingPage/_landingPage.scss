@@ -21,7 +21,7 @@
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{padding:100px 0 100px;}
 
-#pageintro .introtxt{display:block; max-width:50%; margin:0 auto; text-align:center;}
+#pageintro .introtxt{display:block; max-width:70%; margin:0 auto; text-align:center;}
 #pageintro .introtxt *{margin:0;}
 #pageintro .introtxt .heading{margin-bottom:15px; font-size:36px; text-transform: none;}
 #pageintro .introtxt p{line-height:1.4;}
@@ -69,7 +69,7 @@
 .split .box .elements li:last-child::before{display:none;}
 .split .box .elements li article *{margin:0; padding:0;}
 .split .box .elements li article .icon{display:block; position:absolute; top:0; left:0; margin:0; width:60px; height:60px; border:none;}
-.split .box .elements li article .icon i{display:block; position:relative; width:60px; height:60px; line-height:58px; border:1px solid; border-radius:50%; font-size:22px; text-align:center;}
+.split .box .elements li article .icon i{display:block; position:relative; width:60px; height:60px; line-height:58px; border:1px solid; border-radius:50%; font-size:22px; text-align:center;font-family: inherit;font-style: normal;}
 .split .box .elements li article .icon i::before{}
 .split .box .elements li article .icon i::after{display:block; position:absolute; top:3px; left:3px; width:52px; height:52px; border:2px solid; border-radius:50%; content:"";}
 .split .box .elements li article .heading{margin-bottom:10px; padding-top:5px; font-size:1.2rem;}
@@ -81,7 +81,7 @@
 
 #latest ul li{}
 #latest ul li:last-child{}
-#latest ul li article{position:relative; max-width:320px; border:1px solid;}
+#latest ul li article{position:relative; max-width:320px;}
 #latest ul li figure{position:relative; text-align:center;}
 #latest ul li figure figcaption{position:static; margin-top:-20px;}
 #latest ul li .excerpt{padding:30px 20px; text-align:center;}
