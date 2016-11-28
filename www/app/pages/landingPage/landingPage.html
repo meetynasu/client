@@ -1,5 +1,230 @@
+<!--------------------------------------------->
+<!--                 HEADER                  -->
+<!--------------------------------------------->
 
-<!--                                HEADER                                   -->
+<div id="ma-header-primary" class="ma-header hidden" style="z-index: 10;">
+
+    <!--                     START: HEADER (SMALL SCREEN)                    -->
+    <!------------------------------------------------------------------------->
+    <div class="ma-header--small visible-xs">
+
+        <!-------------------- START: MENU (SMALL SCREEN) --------------------->
+        <div class="ma-header__block pull-left">
+            <a href="#"
+               aria-label="Homepage"
+               class="ma-header__block__btn link-reset"
+               ng-click="vm.slideNavMenu()">
+                <i class="material-icons ma-header__block__btn__icon">menu</i>
+                <span class="screen-reader-only">
+                    Waysily
+                </span>
+            </a>
+        </div>
+        <!--                    END: MENU (SMALL SCREEN)                     -->
+
+
+
+        <!--------------------- START: SEARCH (SMALL SCREEN) ------------------>
+        <div class="ma-header__block ma-header__block__search-wrapper"
+             role="search">
+            <form class="ma-header__block__search-wrapper__form">
+                <div class="ma-header__block__search-wrapper__form__search-bar">
+                    <i class="material-icons
+                              ma-header__block__btn__icon
+                              ma-header__block__search-wrapper__form__search-bar__icon">
+                        search
+                    </i>
+                    <label class="screen-reader-only"
+                           for="header-search-form" aria-hidden="true">
+                        Where to?
+                    </label>
+                    <input type="text"
+                           class="ma-header__block__search-wrapper__form__search-bar__input"
+                           placeholder="Where to?" autocomplete="off"
+                           name="location" class="location" value="">
+                    <input type="hidden" name="source" value="hdr">
+                </div>
+            </form>
+        </div>
+        <!--                     END: SEARCH (SMALL SCREEN)                  -->
+
+
+
+        <!---------------------- START: NAV (SMALL SCREEN) -------------------->
+        <nav class="ma-nav--small"
+             ng-class="{'ma-nav--small--active': vm._slideout}"
+             role="navigation">
+
+            <div class="ma-nav--small__mask"
+                 ng-class="{'ma-nav--small__mask--active': vm._slideout}"
+                 ng-click="vm.slideNavMenu()"></div>
+
+            <div class="ma-nav--small__content ma-nav-content"
+                 ng-class="{'ma-nav--small__content--active': vm._slideout}">
+
+                <div class="ma-nav-content__header">
+                    <div class="ma-nav-content__header__profile">
+
+                        <div class="ma-nav-content__header__profile__user-item">
+                            <div class="ma-photo-profile
+                                        ma-photo-profile--tiny
+                                        round">
+                                <img width="32" height="32" src="https://a2.muscache.com/im/pictures/27b8a775-011e-4659-a82d-95320b05c1c8.jpg?aki_policy=profile_x_medium" alt="">
+                            </div>
+                            <div class="ma-label
+                                        ma-label--simple
+                                        ma-label--simple--medium
+                                        ma-label--simple--primary
+                                        margin-reset
+                                        text-truncate">Sergio Ruiz Davila</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="nav-menu-wrapper">
+                    <div class="nav-menu-wrapper__container">
+                        <div class="nav-menu-wrapper__container__menu">
+                            <ul class="nav-menu-wrapper__container__menu__group
+                                       nav-menu-wrapper__container__menu__group--first
+                                       list-unstyled">
+                                <li class="items-logged-in">
+                                    <a href="/dashboard" class="link-reset menu-item dashboard hide" rel="nofollow">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a data-signup-modal="" href="/signup_login" class="link-reset menu-item" rel="nofollow">
+                                        Sign Up
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a data-login-modal="" href="/login" class="link-reset menu-item" rel="nofollow">
+                                        Log In
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/alerts" rel="nofollow" class="link-reset menu-item">
+                                        Messages
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/inbox" rel="nofollow" class="link-reset menu-item">
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a href="/how-it-works" class="link-reset menu-item" rel="nofollow">
+                                        How it Works
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="nav-menu-wrapper__container__menu__group list-unstyled">
+                                <li>
+                                    <a href="/help" rel="nofollow" class="link-reset menu-item">
+                                        Help
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/invite" rel="nofollow" class="link-reset menu-item">
+                                        Invite Friends
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/logout" rel="nofollow" class="link-reset menu-item logout">
+                                        Log Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+        <!--                     END: NAV (SMALL SCREEN)                     -->
+
+    </div>
+    <!--                      END: HEADER (SMALL SCREEN)                     -->
+
+
+
+    <!--                   START: HEADER (MD AND LG SCREEN)                  -->
+    <!------------------------------------------------------------------------->
+    <header class="hidden-xs clearfix">
+
+        <!------------------- START: ABOUT (MD AND LG SCREEN) ----------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left" style="padding-left: 30px">
+            <!-- About Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="about">About</a>
+        </div>
+        <!--                   END: ABOUT (MD AND LG SCREEN)                 -->
+
+
+        <!--------------- START: HOW IT WORKS (MD AND LG SCREEN) -------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left">
+            <!-- About Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="about">How it works?</a>
+        </div>
+        <!--                 END: ABOUT (MD AND LG SCREEN)                   -->
+
+
+        <!------------------ START: SIGN UP (MD AND LG SCREEN) ---------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-right" style="padding-right: 30px">
+
+            <!-- Sign Up Button -->
+            <a class="ma-btn
+                      ma-btn--secondary
+                      ma-btn--default"
+               href="#" ui-sref="signUp">Sign Up</a>
+
+        </div>
+        <!--                 END: SIGN UP (MD AND LG SCREEN)                 -->
+
+
+        <!------------------- START: LOG IN (MD AND LG SCREEN) ---------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-right">
+
+            <!-- Log In Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="logIn">Log In</a>
+
+        </div>
+        <!--                  END: LOG IN (MD AND LG SCREEN)                 -->
+
+    </header>
+    <!--                    END: HEADER (MD AND LG SCREEN)                   -->
+
+</div>
+
+
+
+
+<!--                          HEADER (TRANSPARENT)                           -->
 <!----------------------------------------------------------------------------->
 
 <div class="ma-header ma-header--transparent">
@@ -282,72 +507,58 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper bgded overlay coloured" style="background-image:url('images/demo/backgrounds/03.png');">
-  <div class="hoc container clear">
-    <!-- ################################################################################################ -->
-    <article class="center">
-      <h2 class="heading font-x3">Sollicitudin sapien tincidunt purus eu auctor sollicitudin turpis leo</h2>
-      <p class="btmspace-30">Urna sed massa sed vestibulum nisi eu est laoreet.</p>
-      <footer><a class="btn medium" href="#">Cursus vivamus</a></footer>
-    </article>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <footer id="footer" class="hoc clear">
-    <!-- ################################################################################################ -->
-    <div class="one_quarter first">
-      <h6 class="title">Eget neque mattis</h6>
-      <p>Lacinia curabitur vulputate purus nibh in dapibus diam tempus quis proin lobortis metus vel consequat varius tincidunt mauris at.</p>
-      <p>Finibus lorem ligula interdum ipsum vel venenatis magna quam at libero nullam mattis scelerisque convallis.</p>
-    </div>
-    <div class="one_quarter">
-      <h6 class="title">Aliquam sed velit</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-          Street Name &amp; Number, Town, Postcode/Zip
-          </address>
-        </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
-          +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-      </ul>
-    </div>
-    <div class="one_quarter">
-      <h6 class="title">Sagittis vitae eros</h6>
-      <ul class="nospace linklist">
-        <li><a href="#">Eu augue semper non elit</a></li>
-        <li><a href="#">Amet enim molestie mattis</a></li>
-        <li><a href="#">Euismod nisi nunc interdum</a></li>
-        <li><a href="#">Felis hendrerit non efficitur</a></li>
-        <li><a href="#">Augue placerat integer ligula</a></li>
-      </ul>
-    </div>
-    <div class="one_quarter">
-      <h6 class="title">Nec consectetur</h6>
-      <ul class="nospace linklist">
-        <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">Quam fusce cursus</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            <p class="nospace">Blandit eleifend maximus class aptent taciti sociosqu litora&hellip;</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">Massa amet aliquam</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
-            <p class="nospace">Per conubia nostra inceptos himenaeos etiam quis lacus&hellip;</p>
-          </article>
-        </li>
-      </ul>
-    </div>
-    <!-- ################################################################################################ -->
-  </footer>
+    <footer id="footer" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div class="one_quarter first">
+        <h6 class="title">Eget neque mattis</h6>
+        <p>Lacinia curabitur vulputate purus nibh in dapibus diam tempus quis proin lobortis metus vel consequat varius tincidunt mauris at.</p>
+        <p>Finibus lorem ligula interdum ipsum vel venenatis magna quam at libero nullam mattis scelerisque convallis.</p>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Aliquam sed velit</h6>
+        <ul class="nospace linklist contact">
+          <li><i class="fa fa-map-marker"></i>
+            <address>
+            Street Name &amp; Number, Town, Postcode/Zip
+            </address>
+          </li>
+          <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
+            +00 (123) 456 7890</li>
+          <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
+          <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Sagittis vitae eros</h6>
+        <ul class="nospace linklist">
+          <li><a href="#">Eu augue semper non elit</a></li>
+          <li><a href="#">Amet enim molestie mattis</a></li>
+          <li><a href="#">Euismod nisi nunc interdum</a></li>
+          <li><a href="#">Felis hendrerit non efficitur</a></li>
+          <li><a href="#">Augue placerat integer ligula</a></li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Nec consectetur</h6>
+        <ul class="nospace linklist">
+          <li>
+            <article>
+              <h2 class="nospace font-x1"><a href="#">Quam fusce cursus</a></h2>
+              <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+              <p class="nospace">Blandit eleifend maximus class aptent taciti sociosqu litora&hellip;</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h2 class="nospace font-x1"><a href="#">Massa amet aliquam</a></h2>
+              <time class="font-xs block btmspace-10" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+              <p class="nospace">Per conubia nostra inceptos himenaeos etiam quis lacus&hellip;</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
 </div>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -355,8 +566,7 @@
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Ynasu</a></p>
     <!-- ################################################################################################ -->
   </div>
 </div>
@@ -364,3 +574,18 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+
+<script type="text/javascript">
+    $(function() {
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 50) {
+                $("#ma-header-primary").removeClass("hidden");
+                //$("#ma-header-primary").fadeIn();
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+               $("#ma-header-primary").addClass("hidden");
+               //$("#ma-header-primary").fadeOut();
+            }
+        });
+    });
+</script>
