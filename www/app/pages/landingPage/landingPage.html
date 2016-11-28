@@ -2,7 +2,7 @@
 <!--                 HEADER                  -->
 <!--------------------------------------------->
 
-<div id="ma-header-primary" class="ma-header hidden" style="z-index: 10;">
+<div id="ma-header-primary" class="ma-header hidden" style="z-index: 10;height: 81px;">
 
     <!--                     START: HEADER (SMALL SCREEN)                    -->
     <!------------------------------------------------------------------------->
@@ -161,7 +161,7 @@
         <div class="ma-header__block
                     ma-header--transparent__block
                     ma-header--transparent__block--right
-                    pull-left" style="padding-left: 30px">
+                    pull-left" style="padding-left: 30px;height:80px;line-height: 80px;">
             <!-- About Button -->
             <a class="ma-link
                       ma-link--simple
@@ -175,21 +175,46 @@
         <div class="ma-header__block
                     ma-header--transparent__block
                     ma-header--transparent__block--right
-                    pull-left">
-            <!-- About Button -->
+                    pull-left" style="height:80px;line-height: 80px;">
+            <!-- How it works? Button -->
             <a class="ma-link
                       ma-link--simple
                       ma-link--simple--small"
                href="#" ui-sref="about">How it works?</a>
         </div>
-        <!--                 END: ABOUT (MD AND LG SCREEN)                   -->
+        <!--              END: HOW IT WORKS (MD AND LG SCREEN)               -->
+
+
+        <!------------------ START: LOGO (MD AND LG SCREEN) ------------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left" style="  height: 80px;
+                                        width: 100%;
+                                        position: absolute;
+                                        text-align: center;
+                                        padding-right: 0;">
+            <!-- Logo Button -->
+            <a ui-sref="page.landingPage" class="ma-header__block__btn
+                          ma-header__block__logo-wrapper
+                          link-reset" style="height: 100%;"
+                          aria-label="Ynasu">
+                <i class="ma-logo ma-header__block__btn__ma-logo"
+                   style="  background-image: url(../../../assets/images/ynasu-logo-header.png);
+                            background-size: contain;
+                            background-position: center;
+                            width: 80px;
+                            height: 60px;line-height: 80px;"></i>
+            </a>
+        </div>
+        <!--                 END: LOGO (MD AND LG SCREEN)                   -->
 
 
         <!------------------ START: SIGN UP (MD AND LG SCREEN) ---------------->
         <div class="ma-header__block
                     ma-header--transparent__block
                     ma-header--transparent__block--right
-                    pull-right" style="padding-right: 30px">
+                    pull-right" style="padding-right: 30px; height: 80px;line-height: 80px;">
 
             <!-- Sign Up Button -->
             <a class="ma-btn
@@ -205,7 +230,7 @@
         <div class="ma-header__block
                     ma-header--transparent__block
                     ma-header--transparent__block--right
-                    pull-right">
+                    pull-right" style="height: 80px;line-height: 80px;">
 
             <!-- Log In Button -->
             <a class="ma-link
@@ -382,7 +407,7 @@
   <div id="pageintro" class="hoc clear">
     <!-- ################################################################################################ -->
     <article class="introtxt">
-      <img src="../../../assets/images/ynasu-logo-hero.png" alt="ynasu hero image" style="width:330px;">
+      <img id="logo-hero" src="../../../assets/images/ynasu-logo-hero.png" alt="ynasu hero image" style="width:330px;">
       <h2 class="heading">Where cacao farmers meet buyers</h2>
       <p class="ma-p ma-p--large" style="color: #FFF">Our Journey starts in Colombia</p>
     </article>
@@ -580,10 +605,12 @@
         $(window).on("scroll", function() {
             if($(window).scrollTop() > 50) {
                 $("#ma-header-primary").removeClass("hidden");
+                $("#logo-hero").addClass("invisible");
                 //$("#ma-header-primary").fadeIn();
             } else {
                 //remove the background property so it comes transparent again (defined in your css)
                $("#ma-header-primary").addClass("hidden");
+               $("#logo-hero").removeClass("invisible");
                //$("#ma-header-primary").fadeOut();
             }
         });

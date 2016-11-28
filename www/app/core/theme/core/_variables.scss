@@ -200,7 +200,7 @@ $button-primary-border-color: map-get($main-palette, secondary);
 $button-primary-background: map-get($main-palette, primary);
 $button-primary-background-hover: #00987b;
 
-$button-secondary-border: 2px solid $button-primary-background;
+$button-secondary-border: 2px solid #56AED4;
 $button-secondary-background: map-get($main-palette, secondary);
 $button-secondary-background-hover: scale-color($button-secondary-background, $lightness: -15%);
 $button-secondary-color: map-get($main-palette, primary);

@@ -59,12 +59,12 @@
     ///BUTTON_COLOR
 
     &--primary {
-        background-color: $button-primary-background;
+        background-color: #56AED4;
         color: $button-font-color;
         border-bottom-color: $button-primary-border-color;
 
         &:hover:enabled, &:focus {
-            background-color: $button-primary-background-hover;
+            background-color: #56AED4;
             text-decoration: none;
             color: $button-font-color;
         }
@@ -73,12 +73,12 @@
     &--secondary {
         background: 0 0;
         border: $button-secondary-border;
-        color: $button-primary-background;
+        color: #56AED4;
 
         &:hover:enabled, &:focus {
-            background-color: $button-secondary-color;
+            background-color: #56AED4;
             color: $button-font-color;
-            border-bottom-color: $button-secondary-border-color;
+            border-bottom-color: #56AED4;
             text-decoration: none;
         }
     }
@@ -90,7 +90,7 @@
 
         &:hover:enabled, &:focus {
             background-color: $button-tertiary-color;
-            color: $button-secondary-color-hover;
+            color: #56AED4;
             border-bottom-color: $button-tertiary-border-color;
             text-decoration: none;
         }
