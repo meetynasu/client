@@ -1,0 +1,503 @@
+<!--------------------------------------------->
+<!--                 HEADER                  -->
+<!--------------------------------------------->
+
+<div id="ma-about-header" class="ma-header" style="z-index: 10;height: 81px;">
+
+    <!--                     START: HEADER (SMALL SCREEN)                    -->
+    <!------------------------------------------------------------------------->
+    <div class="ma-header--small visible-xs">
+
+        <!-------------------- START: MENU (SMALL SCREEN) --------------------->
+        <div class="ma-header__block pull-left">
+            <a href="#"
+               aria-label="Homepage"
+               class="ma-header__block__btn link-reset"
+               ng-click="vm.slideNavMenu()">
+                <i class="material-icons ma-header__block__btn__icon">menu</i>
+                <span class="screen-reader-only">
+                    Ynasu
+                </span>
+            </a>
+        </div>
+        <!--                    END: MENU (SMALL SCREEN)                     -->
+
+
+
+        <!--------------------- START: SEARCH (SMALL SCREEN) ------------------>
+        <div class="ma-header__block ma-header__block__search-wrapper"
+             role="search">
+            <form class="ma-header__block__search-wrapper__form">
+                <div class="ma-header__block__search-wrapper__form__search-bar">
+                    <i class="material-icons
+                              ma-header__block__btn__icon
+                              ma-header__block__search-wrapper__form__search-bar__icon">
+                        search
+                    </i>
+                    <label class="screen-reader-only"
+                           for="header-search-form" aria-hidden="true">
+                        Where to?
+                    </label>
+                    <input type="text"
+                           class="ma-header__block__search-wrapper__form__search-bar__input"
+                           placeholder="Where to?" autocomplete="off"
+                           name="location" class="location" value="">
+                    <input type="hidden" name="source" value="hdr">
+                </div>
+            </form>
+        </div>
+        <!--                     END: SEARCH (SMALL SCREEN)                  -->
+
+
+
+        <!---------------------- START: NAV (SMALL SCREEN) -------------------->
+        <nav class="ma-nav--small"
+             ng-class="{'ma-nav--small--active': vm._slideout}"
+             role="navigation">
+
+            <div class="ma-nav--small__mask"
+                 ng-class="{'ma-nav--small__mask--active': vm._slideout}"
+                 ng-click="vm.slideNavMenu()"></div>
+
+            <div class="ma-nav--small__content ma-nav-content"
+                 ng-class="{'ma-nav--small__content--active': vm._slideout}">
+
+                <div class="ma-nav-content__header">
+                    <div class="ma-nav-content__header__profile">
+
+                        <div class="ma-nav-content__header__profile__user-item">
+                            <div class="ma-photo-profile
+                                        ma-photo-profile--tiny
+                                        round">
+                                <img width="32" height="32" src="https://a2.muscache.com/im/pictures/27b8a775-011e-4659-a82d-95320b05c1c8.jpg?aki_policy=profile_x_medium" alt="">
+                            </div>
+                            <div class="ma-label
+                                        ma-label--simple
+                                        ma-label--simple--medium
+                                        ma-label--simple--primary
+                                        margin-reset
+                                        text-truncate">Sergio Ruiz Davila</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="nav-menu-wrapper">
+                    <div class="nav-menu-wrapper__container">
+                        <div class="nav-menu-wrapper__container__menu">
+                            <ul class="nav-menu-wrapper__container__menu__group
+                                       nav-menu-wrapper__container__menu__group--first
+                                       list-unstyled">
+                                <li class="items-logged-in">
+                                    <a href="/dashboard" class="link-reset menu-item dashboard hide" rel="nofollow">
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a data-signup-modal="" href="/signup_login" class="link-reset menu-item" rel="nofollow">
+                                        Sign Up
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a data-login-modal="" href="/login" class="link-reset menu-item" rel="nofollow">
+                                        Log In
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/alerts" rel="nofollow" class="link-reset menu-item">
+                                        Messages
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/inbox" rel="nofollow" class="link-reset menu-item">
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li class="items-logged-out">
+                                    <a href="/how-it-works" class="link-reset menu-item" rel="nofollow">
+                                        How it Works
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="nav-menu-wrapper__container__menu__group list-unstyled">
+                                <li>
+                                    <a href="/help" rel="nofollow" class="link-reset menu-item">
+                                        Help
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/invite" rel="nofollow" class="link-reset menu-item">
+                                        Invite Friends
+                                    </a>
+                                </li>
+                                <li class="items-logged-in">
+                                    <a href="/logout" rel="nofollow" class="link-reset menu-item logout">
+                                        Log Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+        <!--                     END: NAV (SMALL SCREEN)                     -->
+
+    </div>
+    <!--                      END: HEADER (SMALL SCREEN)                     -->
+
+
+
+    <!--                   START: HEADER (MD AND LG SCREEN)                  -->
+    <!------------------------------------------------------------------------->
+    <header class="hidden-xs clearfix">
+
+        <!------------------- START: ABOUT (MD AND LG SCREEN) ----------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left" style="padding-left: 30px;height:80px;line-height: 80px;z-index: 1;">
+            <!-- About Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="about">About</a>
+        </div>
+        <!--                   END: ABOUT (MD AND LG SCREEN)                 -->
+
+
+        <!--------------- START: HOW IT WORKS (MD AND LG SCREEN) -------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left" style="height:80px;line-height: 80px;z-index: 1;">
+            <!-- How it works? Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="about">How it works?</a>
+        </div>
+        <!--              END: HOW IT WORKS (MD AND LG SCREEN)               -->
+
+
+        <!------------------ START: LOGO (MD AND LG SCREEN) ------------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-left" style="  height: 80px;
+                                        width: 100%;
+                                        position: absolute;
+                                        text-align: center;
+                                        padding-right: 0;">
+            <!-- Logo Button -->
+            <a ui-sref="page.landingPage" class="ma-header__block__btn
+                          ma-header__block__logo-wrapper
+                          link-reset" style="height: 100%;"
+                          aria-label="Ynasu">
+                <i class="ma-logo ma-header__block__btn__ma-logo"
+                   style="  background-image: url(../../../assets/images/ynasu-logo-header.png);
+                            background-size: contain;
+                            background-position: center;
+                            width: 80px;
+                            height: 60px;line-height: 80px;"></i>
+            </a>
+        </div>
+        <!--                 END: LOGO (MD AND LG SCREEN)                   -->
+
+
+        <!------------------ START: SIGN UP (MD AND LG SCREEN) ---------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-right" style="padding-right: 30px; height: 80px;line-height: 80px;">
+
+            <!-- Sign Up Button -->
+            <a class="ma-btn
+                      ma-btn--secondary
+                      ma-btn--default"
+               href="#" ui-sref="signUp">Sign Up</a>
+
+        </div>
+        <!--                 END: SIGN UP (MD AND LG SCREEN)                 -->
+
+
+        <!------------------- START: LOG IN (MD AND LG SCREEN) ---------------->
+        <div class="ma-header__block
+                    ma-header--transparent__block
+                    ma-header--transparent__block--right
+                    pull-right" style="height: 80px;line-height: 80px;">
+
+            <!-- Log In Button -->
+            <a class="ma-link
+                      ma-link--simple
+                      ma-link--simple--small"
+               href="#" ui-sref="logIn">Log In</a>
+
+        </div>
+        <!--                  END: LOG IN (MD AND LG SCREEN)                 -->
+
+    </header>
+    <!--                    END: HEADER (MD AND LG SCREEN)                   -->
+
+</div>
+
+<div class="header-separator" style="height:80px"></div>
+
+<!--                          START: NAVBAR MENU                             -->
+<!----------------------------------------------------------------------------->
+
+<div class="ma-subnav">
+
+    <div class="container" style="padding: 0;">
+        <ul class="ma-subnav__list text-center">
+            <li class="ma-subnav__list__option">
+                <a class="ma-subnav__list__option__tab"
+                   ui-sref="page.userInboxPage"
+                   href="/users/edit">History</a>
+            </li>
+            <li class="ma-subnav__list__option">
+                <a class="ma-subnav__list__option__tab"
+                   href="/users/edit">Mission</a>
+            </li>
+            <li class="ma-subnav__list__option">
+                <a class="ma-subnav__list__option__tab
+                          ma-subnav__list__option__tab--active"
+                   ui-sref="page.userEditProfilePage"
+                   href="#">Vision</a>
+            </li>
+            <li class="ma-subnav__list__option">
+                <a class="ma-subnav__list__option__tab"
+                   ui-sref="page.userEditAgendaPage"
+                   href="#">Team</a>
+            </li>
+            <li class="ma-subnav__list__option">
+                <a class="ma-subnav__list__option__tab"
+                   ui-sref="page.userEditAgendaPage"
+                   href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--                             END: NAVBAR MENU                            -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../../../assets/images/history-cover-image.jpg');">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>History</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+            <p class="ma-p ma-p--large">
+                Ynaiasu : “meet with someone” in the indigenous Chibcha language.
+
+                That is the idea behind Ynasu. We are creating a direct marketplace where agricultural producers and buyers can meet virtually, connect, and even trade directly.
+
+                Ynasu started as an idea late 2015 in Medellin, Colombia. At the time, a 50- year civil conflict was ending in the country, a conflict which had forced many farmers to grow coca plants. But with this conflict’s end in sight, cocoa was seen as the ideal substitute and symbolizes the post-conflict economy in Colombia.
+
+                After having the opportunity to meet with cacao farmers on site and hearing about the challenges of both chocolate makers and cocoa producers, we noticed the missing link between farmers and buyers.
+
+                We decided to build an online marketplace where the two could meet, connect and trade directly, facilitating transparency and traceability of the food supply chain. Ynasu was born.
+            </p>
+        </div>
+    </div>
+  </main>
+</div>
+
+<div class="bgded overlay" style="background-image:url('../../../assets/images/mission-cover-image.jpg');">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Mission</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+            <p class="ma-p ma-p--large text-center" style="font-style:italic;">
+                We want the distance to become irrelevant in the trading of agricultural commodities
+            </p>
+            <p class="ma-p ma-p--large">
+                Although the world is increasingly  globalized and interconnected thanks to technology, cocoa transactions are still largely conducted in an archaic trading manner: the need for intermediaries, a lack of transparency, and traceability. Many producers do not have access to the necessary and sufficient information to determine the price they should sell for. Furthermore prices are influenced by speculation and arbitrary trading, which has profound impacts on farmers, [but with no strong logical reasoning].
+
+                It is time to change this way of thinking. We believe a system of direct and fair trade is the future for agricultural trade and a way to improve farmer livelihood.
+            </p>
+        </div>
+    </div>
+    <div class="group center space-top-6">
+      <article class="one_third first"><i class="icon fa fa-handshake-o" style="font-size: 50px;"></i>
+        <h4 class="font-x1"><a href="#">FAIR</a></h4>
+        <p class="ma-p ma-p--large text-left">Buyers decide what price the cacao is worth taking into account the quality and also the social-economic aims of the sellers which we publish. This price is agreed independently with the seller.</p>
+      </article>
+      <article class="one_third"><i class="icon fa fa-exchange"></i>
+        <h4 class="font-x1"><a href="#">DIRECT</a></h4>
+        <p class="ma-p ma-p--large text-left">We only work with verified associations, cooperatives and select independent producers; you can be assured that the price you agree to pay the farmers will actually go to the farmers!</p>
+      </article>
+      <article class="one_third"><i class="icon fa fa-pagelines"></i>
+        <h4 class="font-x1"><a href="#">TRANSPARENT</a></h4>
+        <p class="ma-p ma-p--large text-left">Buyers and sellers will receive a breakdown of every associated cost. This helps both sides understand supply chain costs. Nothing is hidden!</p>
+      </article>
+    </div>
+  </main>
+</div>
+
+
+<div class="bgded overlay" style="background-image:url('../../../assets/images/vision-cover-image.jpg');background-position:center;">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Vision</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+            <p class="ma-p ma-p--large text-center" style="font-style:italic;">
+                To extend to other agricultural commodities and countries
+            </p>
+            <p class="ma-p ma-p--large">
+                Farmers produce our food, and through their processes can take care of the land or continue to farm in ways that will be to our entire future detriment. But the more we squeeze their prices, the more pressure they feel, and the less they are able to and worry about taking care of the earth and maintain its viability; resulting in the use of more artificial fertilizers and pesticides. In turn these artificial fertilizers and pesticides are bad for our health.
+
+                We care about our health, but it’s also time we all cared a bit more not just about our own health, but the health of the entire food ecosystem and those who are fundamental to it.
+
+                At Ynasu, we want to make it easier for those [food makers] who want to source fairly and directly to do so and also encourage more to do the same.]
+
+                We have a vision to combine a system of fair and direct trade where farmers can receive meaningful premiums for their products, be empowered to take charge of their own businesses and see the value in sustainable development. But this can only be achieved together. Help us help them.
+
+                Colombia is the perfect place to start; it is the country with the second highest biodiversity in the world and has an abundance of other agricultural commodities like panela, coffee, rubber etc... With this biodiversity, it has the most to gain from a fair and direct trade system which encourages sustainable development practices.
+            </p>
+        </div>
+    </div>
+  </main>
+</div>
+
+
+
+<div class="bgded overlay" style="background-image:url('../../../assets/images/team-cover-image.jpg');background-position:center;">
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear">
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Team</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+            <p class="ma-p ma-p--large text-center" style="font-style:italic;">
+                We think. We dare. A truly international and local team!
+            </p>
+        </div>
+    </div>
+    <div class="group center space-top-6">
+      <article class="one_third first">
+        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Edouard Kaiflin</a></h4>
+        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Swiss</p>
+        <p class="ma-p ma-p--default space-3 margin-reset">The dreamy attorney</p>
+        <p class="ma-p ma-p--large text-left">
+            Edouard passed his bar exam in 2015 after working for an international law firm in Geneva, Switzerland. He moved to Colombia with the conviction of Colombia’s future and saw how he could make an impact.
+
+            Edouard spearheaded the first ever National Chocolate Competition in Colombia alongside the Federación Nacional de Cacaoteros as part of the Fourth International Colombian Cocoa Convention in order to promote the national cocoa industry, from its raw material to its final product.</p>
+      </article>
+      <article class="one_third">
+        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Karlu Chu</a></h4>
+        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Australian/Hong-Kong</p>
+        <p class="ma-p ma-p--default space-3 margin-reset">The aware financier</p>
+        <p class="ma-p ma-p--large text-left">
+            Karlu left a successful career in law & finance in Melbourne, Australia after eight years and arrived in Colombia in 2015.
+
+            After seeing much excess around the world and blind consumption, Karlu wanted to do something that would improve the lives of those who often put in much of the effort but fail to be rewarded: the producers.
+
+            Karlu speaks English, Cantonese, Spanish and Mandarin.
+        </p>
+      </article>
+      <article class="one_third">
+        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Sergio Entrena</a></h4>
+        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Colombian</p>
+        <p class="ma-p ma-p--default space-3 margin-reset">The cool exporter</p>
+        <p class="ma-p ma-p--large text-left">
+            Karlu left a career in finance in Melbourne, Australia after eight years experience in the financial banking and arrived in Colombia in 2015.
+
+            After seeing much excess around the world and blind consumption, Karlu wanted to do something that would improve the lives of those who often put in much of the effort but fail to be rewarded: the producers.
+        </p>
+      </article>
+    </div>
+  </main>
+</div>
+
+
+<div class="wrapper row3">
+    <main class="hoc container clear" style="padding: 0;">
+      <hr>
+    </main>
+</div>
+
+
+<div class="wrapper row3" style="padding-bottom: 60px;">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>Contact</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <p class="ma-p ma-p--large" style="font-style:italic;">
+                We are available, flexible and love communicating!
+            </p>
+            <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">info@ynasu.com</a></h4>
+        </div>
+    </div>
+  </main>
+</div>
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>

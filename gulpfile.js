@@ -38,6 +38,7 @@ var paths = {
         "www/app/pages/landingPage/landingPage.config.js",
         "www/app/pages/landingPage/landingPage.controller.js",
         "www/app/pages/landingPage/landingPage.service.js",
+        "www/app/pages/landingPage/aboutPage/aboutPage.config.js",
         "www/app/pages/signUpPage/signUpPage.config.js",
         "www/app/pages/signUpPage/signUpPage.controller.js"
     ],
