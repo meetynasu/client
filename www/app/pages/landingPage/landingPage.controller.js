@@ -36,6 +36,9 @@ var app;
                     this.$translate.use(this.form.language);
                     mixpanel.track("Change Language");
                 };
+                LandingPageController.prototype.goToSection = function (section) {
+                    document.querySelector('#' + section + '-block').scrollIntoView({ behavior: 'smooth' });
+                };
                 LandingPageController.prototype.goToEarlyAccessForm = function () {
                     document.querySelector('.landingPage__early-access-block').scrollIntoView({ behavior: 'smooth' });
                     mixpanel.track("Go to early access form");

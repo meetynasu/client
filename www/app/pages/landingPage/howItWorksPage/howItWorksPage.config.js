@@ -1,16 +1,16 @@
 (function () {
     'use strict';
     angular
-        .module('mainApp.pages.aboutPage', [])
+        .module('mainApp.pages.howItWorksPage', [])
         .config(config);
     function config($stateProvider) {
         $stateProvider
-            .state('page.landingPage.about', {
-            url: '/landing/about',
+            .state('page.landingPage.work', {
+            url: '/landing/work',
             views: {
                 'container': {
-                    templateUrl: 'app/pages/landingPage/aboutPage/aboutPage.html',
-                    controller: 'mainApp.pages.aboutPage.AboutPageController',
+                    templateUrl: 'app/pages/landingPage/howItWorksPage/howItWorksPage.html',
+                    controller: 'mainApp.pages.howItWorksPage.HowItWorksPageController',
                     controllerAs: 'vm'
                 }
             },
@@ -26,4 +26,4 @@
         });
     }
 })();
-//# sourceMappingURL=aboutPage.config.js.map
+//# sourceMappingURL=howItWorksPage.config.js.map

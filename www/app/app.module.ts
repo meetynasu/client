@@ -21,7 +21,9 @@
             'mainApp.components.header',
             'mainApp.components.map',
             'mainApp.components.footer',
-            'mainApp.pages.landingPage'
+            'mainApp.pages.landingPage',
+            'mainApp.pages.aboutPage',
+            'mainApp.pages.howItWorksPage'
         ])
         .config(config);
 

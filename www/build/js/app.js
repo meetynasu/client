@@ -12,7 +12,9 @@
         'mainApp.components.header',
         'mainApp.components.map',
         'mainApp.components.footer',
-        'mainApp.pages.landingPage'
+        'mainApp.pages.landingPage',
+        'mainApp.pages.aboutPage',
+        'mainApp.pages.howItWorksPage'
     ])
         .config(config);
     function config($locationProvider, $urlRouterProvider, $translateProvider) {
@@ -908,6 +910,9 @@ var app;
                     this.$translate.use(this.form.language);
                     mixpanel.track("Change Language");
                 };
+                LandingPageController.prototype.goToSection = function (section) {
+                    document.querySelector('#' + section + '-block').scrollIntoView({ behavior: 'smooth' });
+                };
                 LandingPageController.prototype.goToEarlyAccessForm = function () {
                     document.querySelector('.landingPage__early-access-block').scrollIntoView({ behavior: 'smooth' });
                     mixpanel.track("Go to early access form");
@@ -994,7 +999,7 @@ var app;
 (function () {
     'use strict';
     angular
-        .module('mainApp.pages.landingPage')
+        .module('mainApp.pages.aboutPage', [])
         .config(config);
     function config($stateProvider) {
         $stateProvider
@@ -1002,7 +1007,9 @@ var app;
             url: '/landing/about',
             views: {
                 'container': {
-                    templateUrl: 'app/pages/landingPage/aboutPage/aboutPage.html'
+                    templateUrl: 'app/pages/landingPage/aboutPage/aboutPage.html',
+                    controller: 'mainApp.pages.aboutPage.AboutPageController',
+                    controllerAs: 'vm'
                 }
             },
             parent: 'page',
@@ -1018,6 +1025,119 @@ var app;
     }
 })();
 //# sourceMappingURL=aboutPage.config.js.map
+var app;
+(function (app) {
+    var pages;
+    (function (pages) {
+        var aboutPage;
+        (function (aboutPage) {
+            var AboutPageController = (function () {
+                function AboutPageController($state, $translate) {
+                    this.$state = $state;
+                    this.$translate = $translate;
+                    this._init();
+                }
+                AboutPageController.prototype._init = function () {
+                    this.form = {};
+                    this.section = 'history';
+                    this.error = {
+                        message: ''
+                    };
+                    this.activate();
+                };
+                AboutPageController.prototype.activate = function () {
+                    var self = this;
+                    console.log('aboutPage controller actived');
+                };
+                AboutPageController.prototype.goToSection = function (section) {
+                    event.preventDefault();
+                    this.section = section;
+                    document.querySelector('#' + section + '-block').scrollIntoView({ behavior: 'smooth' });
+                };
+                return AboutPageController;
+            }());
+            AboutPageController.controllerId = 'mainApp.pages.aboutPage.AboutPageController';
+            AboutPageController.$inject = ['$state',
+                '$translate'];
+            aboutPage.AboutPageController = AboutPageController;
+            angular
+                .module('mainApp.pages.aboutPage')
+                .controller(AboutPageController.controllerId, AboutPageController);
+        })(aboutPage = pages.aboutPage || (pages.aboutPage = {}));
+    })(pages = app.pages || (app.pages = {}));
+})(app || (app = {}));
+//# sourceMappingURL=aboutPage.controller.js.map
+(function () {
+    'use strict';
+    angular
+        .module('mainApp.pages.howItWorksPage', [])
+        .config(config);
+    function config($stateProvider) {
+        $stateProvider
+            .state('page.landingPage.work', {
+            url: '/landing/work',
+            views: {
+                'container': {
+                    templateUrl: 'app/pages/landingPage/howItWorksPage/howItWorksPage.html',
+                    controller: 'mainApp.pages.howItWorksPage.HowItWorksPageController',
+                    controllerAs: 'vm'
+                }
+            },
+            parent: 'page',
+            onEnter: ['$rootScope', function ($rootScope) {
+                    $rootScope.activeHeader = false;
+                    $rootScope.activeFooter = false;
+                }],
+            params: {
+                user: null,
+                id: null
+            }
+        });
+    }
+})();
+//# sourceMappingURL=howItWorksPage.config.js.map
+var app;
+(function (app) {
+    var pages;
+    (function (pages) {
+        var howItWorksPage;
+        (function (howItWorksPage) {
+            var HowItWorksPageController = (function () {
+                function HowItWorksPageController($state, $translate) {
+                    this.$state = $state;
+                    this.$translate = $translate;
+                    this._init();
+                }
+                HowItWorksPageController.prototype._init = function () {
+                    this.form = {};
+                    this.section = 'browse';
+                    this.error = {
+                        message: ''
+                    };
+                    this.activate();
+                };
+                HowItWorksPageController.prototype.activate = function () {
+                    var self = this;
+                    console.log('howItWorksPage controller actived');
+                };
+                HowItWorksPageController.prototype.goToSection = function (section) {
+                    event.preventDefault();
+                    this.section = section;
+                    document.querySelector('#' + section + '-block').scrollIntoView({ behavior: 'smooth' });
+                };
+                return HowItWorksPageController;
+            }());
+            HowItWorksPageController.controllerId = 'mainApp.pages.howItWorksPage.HowItWorksPageController';
+            HowItWorksPageController.$inject = ['$state',
+                '$translate'];
+            howItWorksPage.HowItWorksPageController = HowItWorksPageController;
+            angular
+                .module('mainApp.pages.howItWorksPage')
+                .controller(HowItWorksPageController.controllerId, HowItWorksPageController);
+        })(howItWorksPage = pages.howItWorksPage || (pages.howItWorksPage = {}));
+    })(pages = app.pages || (app.pages = {}));
+})(app || (app = {}));
+//# sourceMappingURL=howItWorksPage.controller.js.map
 (function () {
     'use strict';
     angular

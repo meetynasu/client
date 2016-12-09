@@ -2,7 +2,7 @@
 <!--                 HEADER                  -->
 <!--------------------------------------------->
 
-<div id="ma-about-header" class="ma-header" style="z-index: 10;height: 81px;">
+<div id="ma-howItWorks-header" class="ma-header" style="z-index: 10;height: 81px;">
 
     <!--                     START: HEADER (SMALL SCREEN)                    -->
     <!------------------------------------------------------------------------->
@@ -165,7 +165,7 @@
             <!-- About Button -->
             <a class="ma-link
                       ma-link--simple
-                      ma-link--simple--small" style="border-bottom: 2px solid #56AED4"
+                      ma-link--simple--small"
                href="#" ui-sref="page.landingPage.about">About</a>
         </div>
         <!--                   END: ABOUT (MD AND LG SCREEN)                 -->
@@ -179,7 +179,7 @@
             <!-- How it works? Button -->
             <a class="ma-link
                       ma-link--simple
-                      ma-link--simple--small"
+                      ma-link--simple--small" style="border-bottom: 2px solid #56AED4"
                href="#" ui-sref="page.landingPage.work">How it works?</a>
         </div>
         <!--              END: HOW IT WORKS (MD AND LG SCREEN)               -->
@@ -257,33 +257,21 @@
         <ul class="ma-subnav__list text-center">
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
-                   ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'history'}"
-                   ng-click="vm.goToSection('history')"
-                   href="#">History</a>
+                   ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'browse'}"
+                   ng-click="vm.goToSection('browse')"
+                   href="#">1. Browse our network</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
-                ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'mission'}"
-                   ng-click="vm.goToSection('mission')"
-                   href="#">Mission</a>
+                ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'order'}"
+                   ng-click="vm.goToSection('order')"
+                   href="#">2. Order a sample</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
-                   ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'vision'}"
-                   ng-click="vm.goToSection('vision')"
-                   href="#">Vision</a>
-            </li>
-            <li class="ma-subnav__list__option">
-                <a class="ma-subnav__list__option__tab"
-                ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'team'}"
-                   ng-click="vm.goToSection('team')"
-                   href="#">Team</a>
-            </li>
-            <li class="ma-subnav__list__option">
-                <a class="ma-subnav__list__option__tab"
-                   ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'contact'}"
-                   ng-click="vm.goToSection('contact')"
-                   href="#">Contact</a>
+                   ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'purchase'}"
+                   ng-click="vm.goToSection('purchase')"
+                   href="#">3. Purchase</a>
             </li>
         </ul>
     </div>
@@ -291,194 +279,106 @@
 </div>
 <!--                             END: NAVBAR MENU                            -->
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- Top Background Image Wrapper -->
-<div id="history-block" class="bgded overlay" style="background-image:url('../../../assets/images/history-cover-image.jpg');background-position:center;">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear">
-  </div>
-  <!-- ################################################################################################ -->
-</div>
 <!-- End Top Background Image Wrapper -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper row3">
+<div id="browse-block" class="wrapper row3">
   <main class="hoc container clear" style="padding: 40px 0;">
     <div class="row margin-reset">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h2>History</h2>
-        </div>
-    </div>
-    <div class="row margin-reset">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
-            <p class="ma-p ma-p--large">
-                Ynaiasu : “meet with someone” in the indigenous Chibcha language.
-
-                That is the idea behind Ynasu. We are creating a direct marketplace where agricultural producers and buyers can meet virtually, connect, and even trade directly.
-
-                Ynasu started as an idea late 2015 in Medellin, Colombia. At the time, a 50- year civil conflict was ending in the country, a conflict which had forced many farmers to grow coca plants. But with this conflict’s end in sight, cocoa was seen as the ideal substitute and symbolizes the post-conflict economy in Colombia.
-
-                After having the opportunity to meet with cacao farmers on site and hearing about the challenges of both chocolate makers and cocoa producers, we noticed the missing link between farmers and buyers.
-
-                We decided to build an online marketplace where the two could meet, connect and trade directly, facilitating transparency and traceability of the food supply chain. Ynasu was born.
-            </p>
-        </div>
-    </div>
-  </main>
-</div>
-
-<div id="mission-block" class="bgded overlay" style="background-image:url('../../../assets/images/mission-cover-image.jpg');">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear">
-  </div>
-  <!-- ################################################################################################ -->
-</div>
-
-<div class="wrapper row3">
-  <main class="hoc container clear" style="padding: 40px 0;">
-    <div class="row margin-reset">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h2>Mission</h2>
+            <h2>1. Browse our producers network</h2>
         </div>
     </div>
     <div class="row margin-reset">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
             <p class="ma-p ma-p--large text-center" style="font-style:italic;">
-                We want the distance to become irrelevant in the trading of agricultural commodities
+                12 associations, 2800 producers and it's only the beginning
             </p>
             <p class="ma-p ma-p--large">
-                Although the world is increasingly  globalized and interconnected thanks to technology, cocoa transactions are still largely conducted in an archaic trading manner: the need for intermediaries, a lack of transparency, and traceability. Many producers do not have access to the necessary and sufficient information to determine the price they should sell for. Furthermore prices are influenced by speculation and arbitrary trading, which has profound impacts on farmers, [but with no strong logical reasoning].
+                The only way to set up a trustworthy relationship is being constantly along with the producers listening the worries, the changes of the production… That’s why we are constantly browsing Colombia’s countryside to understand always better the producers…
 
-                It is time to change this way of thinking. We believe a system of direct and fair trade is the future for agricultural trade and a way to improve farmer livelihood.
+                We are selecting the associations according the following criteria: professional organisation, transparent structure, laboral conditions, transparent payments to the members, quality of the harvest, of the product.
             </p>
         </div>
     </div>
-    <div class="group center space-top-6">
-      <article class="one_third first"><i class="icon fa fa-handshake-o" style="font-size: 50px;"></i>
-        <h4 class="font-x1"><a href="#">FAIR</a></h4>
-        <p class="ma-p ma-p--large text-left">Buyers decide what price the cacao is worth taking into account the quality and also the social-economic aims of the sellers which we publish. This price is agreed independently with the seller.</p>
-      </article>
-      <article class="one_third"><i class="icon fa fa-exchange"></i>
-        <h4 class="font-x1"><a href="#">DIRECT</a></h4>
-        <p class="ma-p ma-p--large text-left">We only work with verified associations, cooperatives and select independent producers; you can be assured that the price you agree to pay the farmers will actually go to the farmers!</p>
-      </article>
-      <article class="one_third"><i class="icon fa fa-pagelines"></i>
-        <h4 class="font-x1"><a href="#">TRANSPARENT</a></h4>
-        <p class="ma-p ma-p--large text-left">Buyers and sellers will receive a breakdown of every associated cost. This helps both sides understand supply chain costs. Nothing is hidden!</p>
-      </article>
+    <div class="bgded" style="background-image:url('../../../assets/images/producer-cover-image.jpg');background-position:center;">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <div id="pageintro" class="hoc clear" style="padding: 200px 0 100px;">
+      </div>
+      <!-- ################################################################################################ -->
     </div>
   </main>
 </div>
 
-
-<div id="vision-block" class="bgded overlay" style="background-image:url('../../../assets/images/vision-cover-image.jpg');background-position:center;">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear">
-  </div>
-  <!-- ################################################################################################ -->
-</div>
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="hoc container clear" style="padding: 40px 0;">
-    <div class="row margin-reset">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h2>Vision</h2>
-        </div>
-    </div>
-    <div class="row margin-reset">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
-            <p class="ma-p ma-p--large text-center" style="font-style:italic;">
-                To extend to other agricultural commodities and countries
-            </p>
-            <p class="ma-p ma-p--large">
-                Farmers produce our food, and through their processes can take care of the land or continue to farm in ways that will be to our entire future detriment. But the more we squeeze their prices, the more pressure they feel, and the less they are able to and worry about taking care of the earth and maintain its viability; resulting in the use of more artificial fertilizers and pesticides. In turn these artificial fertilizers and pesticides are bad for our health.
-
-                We care about our health, but it’s also time we all cared a bit more not just about our own health, but the health of the entire food ecosystem and those who are fundamental to it.
-
-                At Ynasu, we want to make it easier for those [food makers] who want to source fairly and directly to do so and also encourage more to do the same.]
-
-                We have a vision to combine a system of fair and direct trade where farmers can receive meaningful premiums for their products, be empowered to take charge of their own businesses and see the value in sustainable development. But this can only be achieved together. Help us help them.
-
-                Colombia is the perfect place to start; it is the country with the second highest biodiversity in the world and has an abundance of other agricultural commodities like panela, coffee, rubber etc... With this biodiversity, it has the most to gain from a fair and direct trade system which encourages sustainable development practices.
-            </p>
-        </div>
-    </div>
-  </main>
-</div>
-
-
-
-<div id="team-block" class="bgded overlay" style="background-image:url('../../../assets/images/team-cover-image.jpg');background-position:center;">
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear">
-  </div>
-  <!-- ################################################################################################ -->
+<div id="order-block" class="wrapper row3">
+    <main class="hoc container clear" style="padding: 0;">
+      <hr>
+    </main>
 </div>
 
 <div class="wrapper row3">
   <main class="hoc container clear" style="padding: 40px 0;">
     <div class="row margin-reset">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h2>Team</h2>
+            <h2>2. Order a sample</h2>
+        </div>
+    </div>
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+            <p class="ma-p ma-p--large">
+                The only way to set up a trustworthy relationship is being constantly along with the producers listening the worries, the changes of the production…
+                That’s why we are constantly browsing Colombia’s countryside to understand always better the producers…
+            </p>
+        </div>
+    </div>
+    <div class="bgded" style="background-image:url('../../../assets/images/order-cover-image.jpg');background-position:center;">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <div id="pageintro" class="hoc clear" style="padding: 200px 0 100px;">
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </main>
+</div>
+
+<div id="purchase-block" class="wrapper row3">
+    <main class="hoc container clear" style="padding: 0;">
+      <hr>
+    </main>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear" style="padding: 40px 0;">
+    <div class="row margin-reset">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <h2>3. Purchase</h2>
         </div>
     </div>
     <div class="row margin-reset">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
             <p class="ma-p ma-p--large text-center" style="font-style:italic;">
-                We think. We dare. A truly international and local team!
+                Know all the costs
+            </p>
+            <p class="ma-p ma-p--large">
+                The only way to set up a trustworthy relationship is being constantly along with the producers listening the worries, the changes of the production…
+                That’s why we are constantly browsing Colombia’s countryside to understand always better the producers…
             </p>
         </div>
     </div>
-    <div class="group center space-top-6">
-      <article class="one_third first">
-        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Edouard Kaiflin</a></h4>
-        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Swiss</p>
-        <p class="ma-p ma-p--default space-3 margin-reset">The dreamy attorney</p>
-        <p class="ma-p ma-p--large text-left">
-            Edouard passed his bar exam in 2015 after working for an international law firm in Geneva, Switzerland. He moved to Colombia with the conviction of Colombia’s future and saw how he could make an impact.
-
-            Edouard spearheaded the first ever National Chocolate Competition in Colombia alongside the Federación Nacional de Cacaoteros as part of the Fourth International Colombian Cocoa Convention in order to promote the national cocoa industry, from its raw material to its final product.</p>
-      </article>
-      <article class="one_third">
-        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Karlu Chu</a></h4>
-        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Australian/Hong-Kong</p>
-        <p class="ma-p ma-p--default space-3 margin-reset">The aware financier</p>
-        <p class="ma-p ma-p--large text-left">
-            Karlu left a successful career in law & finance in Melbourne, Australia after eight years and arrived in Colombia in 2015.
-
-            After seeing much excess around the world and blind consumption, Karlu wanted to do something that would improve the lives of those who often put in much of the effort but fail to be rewarded: the producers.
-
-            Karlu speaks English, Cantonese, Spanish and Mandarin.
-        </p>
-      </article>
-      <article class="one_third">
-        <h4 class="font-x2 margin-reset" style="text-transform:none;"><a href="#">Sergio Entrena</a></h4>
-        <p class="ma-p ma-p--default margin-reset" style="font-weight:bold;">Colombian</p>
-        <p class="ma-p ma-p--default space-3 margin-reset">The cool exporter</p>
-        <p class="ma-p ma-p--large text-left">
-            Karlu left a career in finance in Melbourne, Australia after eight years experience in the financial banking and arrived in Colombia in 2015.
-
-            After seeing much excess around the world and blind consumption, Karlu wanted to do something that would improve the lives of those who often put in much of the effort but fail to be rewarded: the producers.
-        </p>
-      </article>
+    <div class="bgded overlay" style="background-image:url('../../../assets/images/purchase-cover-image.jpg');background-position:center;">
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <div id="pageintro" class="hoc clear">
+      </div>
+      <!-- ################################################################################################ -->
     </div>
   </main>
 </div>
-
 
 <div class="wrapper row3">
     <main class="hoc container clear" style="padding: 0;">

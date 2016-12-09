@@ -116,6 +116,10 @@ module app.pages.landingPage {
              mixpanel.track("Change Language");
         }
 
+        goToSection(section): void {
+            document.querySelector('#'+ section +'-block').scrollIntoView({ behavior: 'smooth' });
+        }
+
         goToEarlyAccessForm(): void {
             // Scroll to a certain element
             document.querySelector('.landingPage__early-access-block').scrollIntoView({ behavior: 'smooth' });
