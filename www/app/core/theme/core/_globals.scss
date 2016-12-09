@@ -221,6 +221,10 @@ body.mainApp {
         display: block;
     }
 
+    h1, h2, h3, h4, h5 {
+      font-family: $body-font-family!important;
+    }
+
     .ma-logo {
         background-image: url($logo-path);
         background-repeat: no-repeat;
