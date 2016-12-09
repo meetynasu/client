@@ -92,7 +92,7 @@ module app.pages.aboutPage {
         /*            METHODS             */
         /**********************************/
 
-        goToSection(section): void {
+        goToSection(section, event): void {
             event.preventDefault();
             this.section = section;
             document.querySelector('#'+ section +'-block').scrollIntoView({ behavior: 'smooth' });

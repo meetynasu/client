@@ -258,31 +258,31 @@
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
                    ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'history'}"
-                   ng-click="vm.goToSection('history')"
+                   ng-click="vm.goToSection('history', $event)"
                    href="#">History</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
                 ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'mission'}"
-                   ng-click="vm.goToSection('mission')"
+                   ng-click="vm.goToSection('mission', $event)"
                    href="#">Mission</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
                    ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'vision'}"
-                   ng-click="vm.goToSection('vision')"
+                   ng-click="vm.goToSection('vision', $event)"
                    href="#">Vision</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
                 ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'team'}"
-                   ng-click="vm.goToSection('team')"
+                   ng-click="vm.goToSection('team', $event)"
                    href="#">Team</a>
             </li>
             <li class="ma-subnav__list__option">
                 <a class="ma-subnav__list__option__tab"
                    ng-class="{'ma-subnav__list__option__tab--active': vm.section === 'contact'}"
-                   ng-click="vm.goToSection('contact')"
+                   ng-click="vm.goToSection('contact', $event)"
                    href="#">Contact</a>
             </li>
         </ul>

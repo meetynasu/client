@@ -22,7 +22,7 @@ var app;
                     var self = this;
                     console.log('aboutPage controller actived');
                 };
-                AboutPageController.prototype.goToSection = function (section) {
+                AboutPageController.prototype.goToSection = function (section, event) {
                     event.preventDefault();
                     this.section = section;
                     document.querySelector('#' + section + '-block').scrollIntoView({ behavior: 'smooth' });
